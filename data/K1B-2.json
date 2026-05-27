@@ -13,6 +13,7 @@
     { "id": "trophy",  "char": "杯", "icon": "🏆",    "color": "bg-amber-100 text-amber-600",   "label": "獎杯" },
     { "id": "bird",    "char": "鳥", "icon": "🐦",    "color": "bg-sky-100 text-sky-700",       "label": "小鳥" },
     { "id": "crow",    "char": "烏", "icon": "🐦‍⬛", "color": "bg-zinc-200 text-zinc-800",     "label": "烏鴉" },
-    { "id": "red",     "char": "紅", "icon": "💄",    "color": "bg-rose-100 text-rose-700",     "label": "口紅" }
+    { "id": "red",     "char": "紅", "icon": "💄",    "color": "bg-rose-100 text-rose-700",     "label": "口紅" },
+    { "id": "stairs-up", "char": "上", "type": "custom-stairs-up", "color": "bg-emerald-100 text-emerald-700", "label": "上樓" }
   ]
 }
