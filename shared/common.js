@@ -389,6 +389,24 @@ const StoryBookVisual = () => /*#__PURE__*/React.createElement("div", {
   }
 }));
 
+// 球拍場景：使用外部圖片（羽毛球拍）
+const RacketVisual = () => /*#__PURE__*/React.createElement("div", {
+  className: "flex items-center justify-center h-full w-full p-1"
+}, /*#__PURE__*/React.createElement("img", {
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Badminton_racket_and_shuttlecock.jpg/320px-Badminton_racket_and_shuttlecock.jpg",
+  alt: "球拍 - 羽毛球拍",
+  className: "max-h-full max-w-full object-contain drop-shadow-sm",
+  referrerPolicy: "no-referrer",
+  loading: "lazy",
+  onError: function (e) {
+    e.target.style.display = 'none';
+    var fallback = document.createElement('span');
+    fallback.className = 'text-5xl md:text-6xl';
+    fallback.textContent = '🏸';
+    e.target.parentNode.appendChild(fallback);
+  }
+}));
+
 // 上樓場景：使用外部圖片(一個人在上樓梯,有箭頭向上)
 const StairsUpVisual = () => /*#__PURE__*/React.createElement("div", {
   className: "flex items-center justify-center h-full w-full p-1"
@@ -414,6 +432,7 @@ const RightSideVisual = ({
   if (item.type === 'custom-soil') return /*#__PURE__*/React.createElement(SoilVisual, null);
   if (item.type === 'custom-story-book') return /*#__PURE__*/React.createElement(StoryBookVisual, null);
   if (item.type === 'custom-stairs-up') return /*#__PURE__*/React.createElement(StairsUpVisual, null);
+  if (item.type === 'custom-racket') return /*#__PURE__*/React.createElement(RacketVisual, null);
   if (item.type && item.type.includes('custom-dogs')) {
     return /*#__PURE__*/React.createElement(DogComparison, {
       target: item.type === 'custom-dogs-small' ? 'small' : 'big'

@@ -20,6 +20,7 @@ window.WORD_DATA["K1B-2"] = {
     { id: "briefcase", char: "事", icon: "💼",     color: "bg-slate-100 text-slate-700",     label: "公事包" },
     { id: "book",      char: "書", icon: "📖",     color: "bg-cyan-100 text-cyan-700",       label: "書本" },
     { id: "sweater",   char: "衣", icon: "🧥",     color: "bg-violet-100 text-violet-700",   label: "毛衣" },
-    { id: "stairs-up", char: "上", type: "custom-stairs-up", color: "bg-emerald-100 text-emerald-700", label: "上樓" }
+    { id: "stairs-up", char: "上", type: "custom-stairs-up", color: "bg-emerald-100 text-emerald-700", label: "上樓" },
+    { id: "racket",    char: "拍", type: "custom-racket",    color: "bg-lime-100 text-lime-700",       label: "球拍" }
   ]
 };
