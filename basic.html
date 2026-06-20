@@ -5,18 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>寶寶識字連連看 - 連連看</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
   <link rel="stylesheet" href="shared/styles.css">
-
-  <!-- 題庫資料 (將 words 設定到 window.WORD_DATA) -->
-  <script src="data/K1B-1.js"></script>
-  <script src="data/K1B-2.js"></script>
-  <!-- 共用元件 (預編譯好的，無 JSX) -->
-  <script src="shared/common.js"></script>
 </head>
 <body class="bg-slate-50 font-sans select-none">
 
@@ -317,5 +306,13 @@
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<App />);
   </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="data/K1B-1.js"></script>
+  <script src="data/K1B-2.js"></script>
+  <script src="shared/common.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </body>
 </html>
