@@ -20,6 +20,11 @@
 </head>
 <body class="bg-slate-50 font-sans select-none">
 
+  <div id="pre-load" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+    <div style="font-size:3rem">🚀</div>
+    <p style="color:#dc2626;font-size:1.25rem;font-weight:700">打幽靈</p>
+    <p style="color:#94a3b8;font-size:0.875rem">載入中，請稍候…</p>
+  </div>
   <div id="root"></div>
 
   <script type="text/babel">
@@ -561,6 +566,7 @@
       );
     };
 
+    document.getElementById('pre-load').style.display = 'none';
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<App />);
   </script>
