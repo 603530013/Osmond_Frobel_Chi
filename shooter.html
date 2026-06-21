@@ -570,10 +570,23 @@
 
   <script>
     !function(){
-      var src = document.getElementById('app-jsx').textContent;
-      var el = document.createElement('script');
-      el.textContent = Babel.transform(src, {presets: ['react']}).code;
-      document.head.appendChild(el);
+      try {
+        var src = document.getElementById('app-jsx').textContent;
+        var el = document.createElement('script');
+        // 使用 classic runtime, 才會輸出 React.createElement(...) 並使用全域 React
+        // (預設的 automatic runtime 會插入 import "react/jsx-runtime", 在 UMD 環境下會炸掉)
+        el.textContent = Babel.transform(src, {
+          presets: [['react', { runtime: 'classic' }]]
+        }).code;
+        document.head.appendChild(el);
+      } catch (err) {
+        console.error('Babel transform failed:', err);
+        var pre = document.getElementById('pre-load');
+        if (pre) pre.innerHTML = '<div style="font-size:2rem">⚠️</div>' +
+          '<p style="color:#dc2626;font-weight:700">載入失敗</p>' +
+          '<pre style="color:#64748b;font-size:0.75rem;max-width:90vw;white-space:pre-wrap">' +
+          (err && err.message ? err.message : err) + '</pre>';
+      }
     }();
   </script>
 </body>
