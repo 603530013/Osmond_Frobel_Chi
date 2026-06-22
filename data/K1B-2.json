@@ -13,9 +13,14 @@
     { "id": "trophy",  "char": "杯", "icon": "🏆",    "color": "bg-amber-100 text-amber-600",   "label": "獎杯" },
     { "id": "bird",    "char": "鳥", "icon": "🐦",    "color": "bg-sky-100 text-sky-700",       "label": "小鳥" },
     { "id": "crow",    "char": "烏", "icon": "🐦‍⬛", "color": "bg-zinc-200 text-zinc-800",     "label": "烏鴉" },
-    { "id": "red",     "char": "紅", "icon": "💄",    "color": "bg-rose-100 text-rose-700",     "label": "口紅" },
-    { "id": "stairs-up", "char": "上", "type": "custom-stairs-up", "color": "bg-emerald-100 text-emerald-700", "label": "上樓" },
-    { "id": "racket",    "char": "拍", "type": "custom-racket",    "color": "bg-lime-100 text-lime-700",       "label": "球拍" },
-    { "id": "goose",     "char": "鵝", "icon": "🐧",              "color": "bg-sky-100 text-sky-700",          "label": "企鵝" }
+    { "id": "red",        "char": "紅", "icon": "💄",    "color": "bg-rose-100 text-rose-700",     "label": "口紅" },
+    { "id": "story",      "char": "故", "type": "custom-story-book", "color": "bg-orange-100 text-orange-700", "label": "故事書" },
+    { "id": "briefcase",  "char": "事", "icon": "💼",    "color": "bg-slate-100 text-slate-700",   "label": "公事包" },
+    { "id": "book",       "char": "書", "icon": "📖",    "color": "bg-cyan-100 text-cyan-700",     "label": "書本" },
+    { "id": "sweater",    "char": "衣", "icon": "🧥",    "color": "bg-violet-100 text-violet-700", "label": "毛衣" },
+    { "id": "stairs-up",  "char": "上", "type": "custom-stairs-up", "color": "bg-emerald-100 text-emerald-700", "label": "上樓" },
+    { "id": "racket",     "char": "拍", "type": "custom-racket",    "color": "bg-lime-100 text-lime-700",       "label": "球拍" },
+    { "id": "goose",      "char": "鵝", "icon": "🐧",    "color": "bg-sky-100 text-sky-700",       "label": "企鵝" },
+    { "id": "boat",       "char": "船", "icon": "🚢",    "color": "bg-blue-100 text-blue-700",     "label": "漁船" }
   ]
 }

@@ -22,6 +22,7 @@ window.WORD_DATA["K1B-2"] = {
     { id: "sweater",   char: "衣", icon: "🧥",     color: "bg-violet-100 text-violet-700",   label: "毛衣" },
     { id: "stairs-up", char: "上", type: "custom-stairs-up", color: "bg-emerald-100 text-emerald-700", label: "上樓" },
     { id: "racket",    char: "拍", type: "custom-racket",    color: "bg-lime-100 text-lime-700",       label: "球拍" },
-    { id: "goose",     char: "鵝", icon: "🐧",              color: "bg-sky-100 text-sky-700",          label: "企鵝" }
+    { id: "goose",     char: "鵝", icon: "🐧",              color: "bg-sky-100 text-sky-700",          label: "企鵝" },
+    { id: "boat",      char: "船", icon: "🚢",              color: "bg-blue-100 text-blue-700",        label: "漁船" }
   ]
 };
