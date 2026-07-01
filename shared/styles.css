@@ -12,3 +12,45 @@
 body {
   overflow-x: hidden;
 }
+
+/* --------------------------------------------------------------------
+ * 觸控裝置上禁用 :hover 樣式 (iPad / 手機)
+ * 避免點擊後 hover 藍框卡住 — 若 Tailwind hoverOnlyWhenSupported
+ * 未生效，這裡的 CSS 也會擋掉所有相關 hover: 類別。
+ * ------------------------------------------------------------------ */
+@media (hover: none) {
+  /* 邊框顏色 hover */
+  .hover\:border-blue-300:hover,
+  .hover\:border-blue-400:hover,
+  .hover\:border-purple-400:hover,
+  .hover\:border-red-400:hover,
+  .hover\:border-amber-300:hover {
+    border-color: inherit;
+  }
+  /* 背景顏色 hover：直接不變色 */
+  .hover\:bg-blue-100:hover,
+  .hover\:bg-purple-100:hover,
+  .hover\:bg-red-100:hover,
+  .hover\:bg-blue-600:hover,
+  .hover\:bg-red-600:hover,
+  .hover\:bg-yellow-500:hover,
+  .hover\:bg-green-600:hover,
+  .hover\:bg-slate-300:hover {
+    background-color: inherit;
+  }
+  /* 陰影 hover */
+  .hover\:shadow-md:hover {
+    box-shadow: inherit;
+  }
+  /* 縮放 hover */
+  .hover\:scale-105:hover,
+  .hover\:scale-110:hover,
+  .group:hover .group-hover\:scale-110 {
+    transform: none;
+  }
+  /* 文字顏色 hover */
+  .hover\:text-blue-600:hover,
+  .hover\:text-slate-600:hover {
+    color: inherit;
+  }
+}

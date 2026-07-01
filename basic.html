@@ -17,6 +17,10 @@
   <div id="root"></div>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // 觸控裝置 (iPad / 手機) 上不套用 hover: 樣式，避免點擊後 hover 藍框黏住
+    tailwind.config = { future: { hoverOnlyWhenSupported: true } };
+  </script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="data/K1B-1.js"></script>
@@ -87,6 +91,8 @@
           setMatches([...matches, newMatch]);
           setSelection(null);
           setAttempts(prev => ({ correct: prev.correct + 1, total: prev.total + 1 }));
+          // 配對正確：念出「<label>的<char>」，例：公事包的事
+          speakText(`${leftItem.label}的${leftItem.char}`);
 
           if (matches.length + 1 === currentWords.length) {
             setTimeout(() => {
@@ -98,7 +104,8 @@
         } else {
           setAttempts(prev => ({ ...prev, total: prev.total + 1 }));
           speakText("答錯囉！再想想");
-          setWrongShake([leftItem.id, rightItem.id]);
+          // 記錄「哪一側的哪個 id」要抖動，避免左右同 id 誤觸發
+          setWrongShake({ leftId: leftItem.id, rightId: rightItem.id });
           setTimeout(() => setWrongShake(null), 500);
           setSelection(null);
         }
@@ -230,7 +237,7 @@
                   {currentWords.map((item) => {
                     const isMatched = matches.find(m => m.leftId === item.id);
                     const isSelected = selection?.side === 'left' && selection.item.id === item.id;
-                    const isShake = wrongShake?.includes(item.id);
+                    const isShake = wrongShake?.leftId === item.id;
                     const isLoading = aiLoading === item.id;
 
                     return (
@@ -274,7 +281,7 @@
                   {rightSideItems.map((item) => {
                     const isMatched = matches.find(m => m.rightId === item.id);
                     const isSelected = selection?.side === 'right' && selection.item.id === item.id;
-                    const isShake = wrongShake?.includes(item.id);
+                    const isShake = wrongShake?.rightId === item.id;
 
                     return (
                       <button

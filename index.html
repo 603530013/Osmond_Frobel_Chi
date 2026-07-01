@@ -6,6 +6,10 @@
   <title>寶寶識字連連看 - 主選單</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // 觸控裝置 (iPad / 手機) 上不套用 hover: 樣式，避免點擊後 hover 藍框黏住
+    tailwind.config = { future: { hoverOnlyWhenSupported: true } };
+  </script>
 
   <link rel="stylesheet" href="shared/styles.css">
 

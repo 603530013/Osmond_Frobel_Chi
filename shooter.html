@@ -17,6 +17,10 @@
   <div id="root"></div>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // 觸控裝置 (iPad / 手機) 上不套用 hover: 樣式，避免點擊後 hover 藍框黏住
+    tailwind.config = { future: { hoverOnlyWhenSupported: true } };
+  </script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="data/K1B-1.js"></script>
