@@ -425,6 +425,24 @@ const StairsUpVisual = () => /*#__PURE__*/React.createElement("div", {
   }
 }));
 
+// 唱歌場景：使用外部圖片
+const SingVisual = () => /*#__PURE__*/React.createElement("div", {
+  className: "flex items-center justify-center h-full w-full p-1"
+}, /*#__PURE__*/React.createElement("img", {
+  src: "https://pic.pngsucai.com/00/95/13/4e2a0017c7275483.webp",
+  alt: "唱歌",
+  className: "max-h-full max-w-full object-contain drop-shadow-sm",
+  referrerPolicy: "no-referrer",
+  loading: "lazy",
+  onError: function (e) {
+    e.target.style.display = 'none';
+    var fallback = document.createElement('span');
+    fallback.className = 'text-5xl md:text-6xl';
+    fallback.textContent = '🎤';
+    e.target.parentNode.appendChild(fallback);
+  }
+}));
+
 const RightSideVisual = ({
   item
 }) => {
@@ -433,6 +451,7 @@ const RightSideVisual = ({
   if (item.type === 'custom-story-book') return /*#__PURE__*/React.createElement(StoryBookVisual, null);
   if (item.type === 'custom-stairs-up') return /*#__PURE__*/React.createElement(StairsUpVisual, null);
   if (item.type === 'custom-racket') return /*#__PURE__*/React.createElement(RacketVisual, null);
+  if (item.type === 'custom-sing') return /*#__PURE__*/React.createElement(SingVisual, null);
   if (item.type && item.type.includes('custom-dogs')) {
     return /*#__PURE__*/React.createElement(DogComparison, {
       target: item.type === 'custom-dogs-small' ? 'small' : 'big'
