@@ -25,6 +25,6 @@ window.WORD_DATA["K1B-2"] = {
     { id: "goose",     char: "鵝", icon: "🐧",              color: "bg-sky-100 text-sky-700",          label: "企鵝" },
     { id: "boat",      char: "船", icon: "🚢",              color: "bg-blue-100 text-blue-700",        label: "漁船" },
     { id: "sing",      char: "唱", type: "custom-sing",     color: "bg-pink-100 text-pink-700",        label: "唱歌" },
-    { id: "face",      char: "臉", icon: "👻",              color: "bg-fuchsia-100 text-fuchsia-700",   label: "扮鬼臉" }
+    { id: "face",      char: "臉", icon: "🤪",              color: "bg-fuchsia-100 text-fuchsia-700",   label: "扮鬼臉" }
   ]
 };
