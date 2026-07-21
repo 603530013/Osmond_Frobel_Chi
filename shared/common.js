@@ -452,6 +452,7 @@ const RightSideVisual = ({
   if (item.type === 'custom-stairs-up') return /*#__PURE__*/React.createElement(StairsUpVisual, null);
   if (item.type === 'custom-racket') return /*#__PURE__*/React.createElement(RacketVisual, null);
   if (item.type === 'custom-sing') return /*#__PURE__*/React.createElement(SingVisual, null);
+  if (item.type === 'custom-perform') return /*#__PURE__*/React.createElement('img', { src: 'https://pic.616pic.com/ys_bnew_img/00/45/49/Aq0YADGKBh.jpg', alt: '表演', style: { width: '90px', height: '90px', objectFit: 'cover', borderRadius: '12px' } });
   if (item.type && item.type.includes('custom-dogs')) {
     return /*#__PURE__*/React.createElement(DogComparison, {
       target: item.type === 'custom-dogs-small' ? 'small' : 'big'
